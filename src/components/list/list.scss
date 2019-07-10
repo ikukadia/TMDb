@@ -1,0 +1,47 @@
+.List {
+  @mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+  }
+
+  text-align: center;
+
+  .searchBar {
+    position: fixed;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 220px;
+    z-index: 1;
+  }
+
+  .movies {
+    padding: 1.5% 10% 0 10%;
+    position: relative;
+    top: 275px;
+    text-align: center;
+  }
+
+  .center {
+      margin: 0 auto;
+  }
+
+  .hoverover:hover {
+      cursor: pointer;
+      box-shadow: 7px 7px #EAC435;
+  }
+
+  .hoverover:hover{ @include transform(scale(1.05)); }
+
+  .arrows {
+    background-color: rgb(219, 218, 218);
+    color: #CA1551;
+    
+  }
+
+  .arrows:hover, .arrows:focus {
+    background-color: #CA1551;
+    color: white;
+  }
+}

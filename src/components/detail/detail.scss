@@ -1,0 +1,29 @@
+.Detail {
+  @mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+  }
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  .center {
+    margin: 0 auto;
+    position: relative;
+    top: 180px;
+  }
+
+  .button {
+    background-color: rgb(219, 218, 218);
+    color: #CA1551;
+  }
+
+  .button:hover, .button:focus {
+    background-color: #CA1551;
+    color: white;
+  }
+
+  .button:hover{ @include transform(scale(1.05)); }
+}

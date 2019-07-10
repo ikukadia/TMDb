@@ -1,0 +1,53 @@
+.Gallery{
+  @mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+  }
+
+  text-align: center;
+  
+  .options {
+    position: fixed;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 180px;
+  }
+
+  .options:hover, .options:focus {
+    color: #ee155d;
+  }
+
+  .movies {
+    padding: 1.5% 10% 0 10%;
+    position: relative;
+    top: 195px;
+    text-align: center;
+  }
+
+  .navigation {
+    position: fixed;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: 5px;
+  }
+
+  .hover:hover {
+    cursor: pointer;
+    box-shadow: 7px 7px #EAC435;
+  }
+
+  .hover:hover{ @include transform(scale(1.05)); }
+
+  .button {
+    background-color: rgb(219, 218, 218);
+    color: #CA1551;
+  }
+
+  .button:hover, .button:focus {
+    background-color: #CA1551;
+    color: white;
+  }
+}
